@@ -29,7 +29,8 @@ public class BurgerPriceParameterizedTest {
         this.expectedPrice = expectedPrice;
     }
 
-    @Parameterized.Parameters
+    @Parameterized.Parameters(name = "Тестовые данные: цена одной булочки бургера = {0}, " +
+            "список цен добавленных соусов/ингредиентов = {1}, ожидаемая цена заказа = {2}")
     public static Object[][] parameters(){
         return new Object[][]{
                 {150.0f, Arrays.asList(50.0f, 200.0f), 550.0f},
